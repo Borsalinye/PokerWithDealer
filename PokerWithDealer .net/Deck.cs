@@ -28,13 +28,11 @@ namespace PokerWithDealer.net
         }
         public List<Card> NewDeck()
         {
-            int i = 0;
             foreach (Suits suit in Enum.GetValues(typeof(Suits)))
             {
                 foreach (Ranks rank in Enum.GetValues(typeof(Ranks)))
                 {
                     AddCard(new Card(suit, rank));
-                    i++;
                 }
             }
             Shuffle();
